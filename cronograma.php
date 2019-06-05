@@ -78,7 +78,7 @@
                 $("#equipos").html('Por favor espere...');
               },
               success:function(respuesta){
-                
+                $("#equipos").html(respuesta);
               }
             })
         })
