@@ -64,6 +64,25 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" style="margin-top: 4%">
+          <table class="table">
+            <tr>
+              <td>Tipo</td>
+              <td>Nombre</td>
+            </tr>
+            <tr>
+              <td>Inspeccion</td>
+              <td>Calor adecuado de la caseta de la bomba, </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+    </div>
+
     <script src="js/selects.js"></script>
     <script>
       $(document).ready(function(){

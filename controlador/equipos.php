@@ -8,6 +8,7 @@
 ?>
 
 <select name="equipos" class="custom-select">
+	<option value="#">Elige el equipo</option>
 	<?php
 		while($fila=mysqli_fetch_array($equipos)){
 			echo "<option>".$fila['nombre']."</option>";
