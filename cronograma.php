@@ -58,7 +58,7 @@
               <div id="subsystem"></div>
             </div>
             <div class="col-sm-4">
-              <div id="equipos"></div>
+              <div id="equipment"></div>
             </div>
           </div>
         </div>
@@ -73,10 +73,9 @@
               <td>Tipo</td>
               <td>Nombre</td>
             </tr>
-            <tr>
-              <td>Inspeccion</td>
-              <td>Calor adecuado de la caseta de la bomba, </td>
-            </tr>
+            <div id="procesos">
+              
+            </div>
           </table>
         </div>
         <div class="col-sm-4"></div>
@@ -94,15 +93,16 @@
               type:"GET",
               data:"id_subs="+subsistem,
               beforeSend:function(){
-                $("#equipos").html('Por favor espere...');
+                $("#equipment").html('Por favor espere...');
               },
               success:function(respuesta){
-                $("#equipos").html(respuesta);
+                $("#equipment").html(respuesta);
               }
             })
         })
       })
     </script>
+    <script src="js/procesos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>

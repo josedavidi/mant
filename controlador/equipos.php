@@ -7,11 +7,11 @@
 	$equipos = $db->query("SELECT * FROM equipos WHERE id_subsistema='$id' ")or die('error'.mysqli_errno($db));
 ?>
 
-<select name="equipos" class="custom-select">
+<select name="equipos" class="custom-select" id="equipos">
 	<option value="#">Elige el equipo</option>
 	<?php
 		while($fila=mysqli_fetch_array($equipos)){
-			echo "<option>".$fila['nombre']."</option>";
+			echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
 		}
 	?>
 </select>
