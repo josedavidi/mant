@@ -8,8 +8,19 @@ $(document).ready(function(){
 		})
 
 		$("#equipment").change(function(){
-			var quipmt = $("#equipos").val();
-			alert(quipmt);
+			var equipmt = $("#equipos").val();
+			
+			$.ajax({
+				url:"controlador/procesos.php",
+				type:"GET",
+				data:"sistema="+sistem+"&subsistema="+subsistem+"&equipo="+equipmt,
+				beforeSend:function(){
+					$("#process").html("Por favor espere...");
+				},
+				success:function(respuesta){
+					$("#process").html(respuesta);
+				}
+			})
 		})
 
 	})

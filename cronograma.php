@@ -73,7 +73,7 @@
               <td>Tipo</td>
               <td>Nombre</td>
             </tr>
-            <div id="procesos">
+            <div id="process">
               
             </div>
           </table>
