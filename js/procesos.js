@@ -1,15 +1,15 @@
 $(document).ready(function(){
 	$("#sistema").change(function(){
 		var sistem = $("#sistema").val();
-
+		var subsistem=null;
+		var equipmt=null;
 		$("#subsystem").change(function(){
-			var subsistem = $("#subsistema").val();
+			subsistem = $("#subsistema").val();
 			
 		})
 
 		$("#equipment").change(function(){
-			var equipmt = $("#equipos").val();
-			
+		 	 equipmt = $("#equipos").val();
 			$.ajax({
 				url:"controlador/procesos.php",
 				type:"GET",
