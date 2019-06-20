@@ -66,22 +66,12 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4" style="margin-top: 4%">
-          <table class="table">
-            <tr>
-              <td>Tipo</td>
-              <td>Nombre</td>
-            </tr>
-            <div id="process">
-              
-            </div>
-          </table>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8" style="margin-top: 4%">
+          <div id="process"></div>
         </div>
-        <div class="col-sm-4"></div>
       </div>
     </div>
-
     <script src="js/selects.js"></script>
     <script>
       $(document).ready(function(){
