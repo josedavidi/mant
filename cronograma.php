@@ -66,12 +66,35 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-2"></div>
         <div class="col-sm-8" style="margin-top: 4%">
           <div id="process"></div>
         </div>
+        <div class="col-sm-4">
+          <br>
+          <h3>Detalles del Trabajo</h3>
+          <hr>
+          <form>
+            <b>Agregar fotografias</b>
+            <input type="date" name="" class="form-control">
+            <br>
+            <input type="file" name="" class="form-control">
+            <br>
+            <b>Estado</b>
+            <select class="custom-select">
+              <option>Ok</option>
+              <option>Mantenimiento</option>
+              <option>Dañado</option>
+            </select>
+            <br><br>
+            <b>Observacion</b>
+            <textarea class="form-control"></textarea>
+            <br>
+            <button class="btn btn-success">Guardar Actividad</button>
+          </form>
+        </div>
       </div>
     </div>
+    <script src="https://kit.fontawesome.com/fc6955f185.js"></script>
     <script src="js/selects.js"></script>
     <script>
       $(document).ready(function(){
@@ -95,5 +118,6 @@
     <script src="js/procesos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
   </body>
 </html>
