@@ -40,7 +40,7 @@
       <div class="row">
         <div class="col-sm-12">
           <br>
-          <h3>Cronograma</h3>
+          <h3>Calendario Procesos</h3>
           <div class="row">
             <div class="col-sm-4">
               <select class="custom-select" name="sistema" id="sistema">
@@ -54,50 +54,22 @@
                 ?>
               </select>
             </div>
+          </div>
+          <div class="row">
             <div class="col-sm-4">
-              <div id="subsystem"></div>
-            </div>
-            <div class="col-sm-4">
-              <div id="equipment"></div>
+                <div id="subsystem"></div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8" style="margin-top: 4%">
-          <div id="process"></div>
-          <script>
-            $(document).ready(function(){
-              $('#hola').click(function(){
-                alert('hola')
-              })
-            })
-          </script>
-        </div>
-        <div class="col-sm-4">
-          <br>
-          <h3>Detalles del Trabajo</h3>
-          <hr>
-          <form>
-            <b>Agregar fotografias</b>
-            <input type="date" name="" class="form-control">
-            <br>
-            <input type="file" name="" class="form-control">
-            <br>
-            <b>Estado</b>
-            <select class="custom-select">
-              <option>Ok</option>
-              <option>Mantenimiento</option>
-              <option>Dañado</option>
-            </select>
-            <br><br>
-            <b>Observacion</b>
-            <textarea class="form-control"></textarea>
-            <br>
-            <button class="btn btn-success">Guardar Actividad</button>
-          </form>
+          <div class="row">
+            <div class="col-sm-4">
+                <div id="equipment"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+               <div id="processCalendario"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -122,7 +94,7 @@
         })
       })
     </script>
-    <script src="js/procesos.js"></script>
+    <script src="js/procesosCalendario.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 

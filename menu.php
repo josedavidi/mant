@@ -11,6 +11,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="cronograma.php">Cronograma</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="calendarioProcesos.php">Calendario Procesos</a>
+                </li>
               </ul>
               <span class="navbar-text">
                 <a href="miperfil.php">Hola, <?php echo $_SESSION['names']; ?></a> / <span><a href="controlador/salir.php">Salir</a></span>

@@ -7,19 +7,10 @@
 	$procesos = $db->query("SELECT * FROM procesos WHERE id_subsistema='$idSubsistema'")or die("error".mysqli_errno($db));
 
 ?>
-
-<table class="table table-striped table-bordered">
-	<tr>
-		<th>Tipo</th>
-		<th>Nombre</th>
-	</tr>
-	<?php
+<select name="cprocesos" class="custom-select">
+<?php
 		while($fila = mysqli_fetch_array($procesos)){
-		echo "<tr>
-				<td>".$fila['tipo']."</td>
-				<td>".$fila['nombre']."</td>
-				<td><input type='checkbox' id=''></td>
-			  </tr>";
+		echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
 		}
 	?>
-</table>
+</select>
