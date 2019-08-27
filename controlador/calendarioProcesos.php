@@ -14,3 +14,5 @@
 		}
 	?>
 </select>
+<hr>
+<button class="btn btn-success btn-block">Registrar</button>

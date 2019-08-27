@@ -40,9 +40,9 @@
       <div class="row">
         <div class="col-sm-12">
           <br>
-          <h3>Calendario Procesos</h3>
+          <h3 class="text-center"><i class="far fa-calendar-alt"></i> Calendario Procesos</h3>
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 offset-4">
               <select class="custom-select" name="sistema" id="sistema">
                 <option>Selecciona el Sistema</option>
                 <?php
@@ -56,17 +56,17 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 offset-4">
                 <div id="subsystem"></div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 offset-4">
                 <div id="equipment"></div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 offset-4">
                <div id="processCalendario"></div>
             </div>
           </div>
