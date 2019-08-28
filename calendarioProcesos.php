@@ -67,6 +67,18 @@
           </div>
           <div class="row">
             <div class="col-sm-4 offset-4">
+              <select name="mes" class="custom-select">
+              <?php
+                $meses = $db->query("SELECT * FROM meses");
+                while($fila=mysqli_fetch_array($meses)){
+                  echo "<option>".$fila['nombre']."</option>";
+                }
+              ?>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 offset-4">
                <div id="processCalendario"></div>
             </div>
           </div>
