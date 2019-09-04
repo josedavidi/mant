@@ -41,15 +41,18 @@
         <div class="col-sm-12">
           <br>
           <h3 class="text-center"><i class="far fa-calendar-alt"></i> Calendario Procesos</h3>
+
           <div class="row">
             <div class="col-sm-4 offset-4">
+              <a href="mesProceso.php">Ver Resumen</a>
+              <hr>
               <select class="custom-select" name="sistema" id="sistema">
                 <option>Selecciona el Sistema</option>
                 <?php
                   $sistemas = $db->query("SELECT * FROM sistemas")or die('error'.mysqli_errno($db));
 
                   while($fila = mysqli_fetch_array($sistemas)){
-                    echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
+                    echo "<option value=".$fila['id'].">".$fila['nombre']."</option>";
                   }
                 ?>
               </select>
@@ -60,6 +63,7 @@
                 <div id="subsystem"></div>
             </div>
           </div>
+          <form action="modelo/procesoCalendario.php" method="POST">
           <div class="row">
             <div class="col-sm-4 offset-4">
                 <div id="equipment"></div>
@@ -71,7 +75,7 @@
               <?php
                 $meses = $db->query("SELECT * FROM meses");
                 while($fila=mysqli_fetch_array($meses)){
-                  echo "<option>".$fila['nombre']."</option>";
+                  echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
                 }
               ?>
               </select>
@@ -82,6 +86,7 @@
                <div id="processCalendario"></div>
             </div>
           </div>
+          </form>
         </div>
       </div>
     </div>

@@ -8,12 +8,14 @@ $(document).ready(function(){
 			
 		})
 
-		$("#equipment").change(function(){
+		$("#meses").change(function(){
 		 	 equipmt = $("#equipos").val();
+		 	 var month = $('#meses').val();
+
 			$.ajax({
 				url:"controlador/procesos.php",
 				type:"GET",
-				data:"sistema="+sistem+"&subsistema="+subsistem+"&equipo="+equipmt,
+				data:"meses="+month+"&equipo="+equipmt,
 				beforeSend:function(){
 					$("#process").html("Por favor espere...");
 				},

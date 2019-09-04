@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <title>Cronograma</title>
+    <title>Informe</title>
   </head>
   <body>
 
@@ -40,7 +40,7 @@
       <div class="row">
         <div class="col-sm-12">
           <br>
-          <h3>Cronograma</h3>
+          <h3>Informes</h3>
           <div class="row">
             <div class="col-sm-3">
               <select class="custom-select" name="sistema" id="sistema">

@@ -10,7 +10,7 @@
 <select name="cprocesos" class="custom-select">
 <?php
 		while($fila = mysqli_fetch_array($procesos)){
-		echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
+		echo "<option value=".$fila['id'].">(".$fila['id'].") ".$fila['nombre']."</option>";
 		}
 	?>
 </select>
