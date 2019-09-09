@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <title>Informe</title>
+    <title>Informes</title>
   </head>
   <body>
 
@@ -61,16 +61,19 @@
               <div id="equipment"></div>
             </div>
             <div class="col-sm-3">
-              <select name="mes" id="meses" class="custom-select">
-                <option value="#">Selecciona el mes</option>
-              <?php
-                $meses = $db->query("SELECT * FROM meses");
-                while($fila=mysqli_fetch_array($meses)){
-                  echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
-                }
-              ?>
-              </select>
+    
+                <select name="meses" id="meses" class="custom-select">
+                   <option value="#">Selecciona el Mes</option>
+                 <?php 
+                 $meses = $db->query("SELECT * FROM meses")or die("error".mysqli_errno($db));
+                  while($fila = mysqli_fetch_array($meses)){
+                      echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
+                    }
+                 ?>
+                  </select>
+          
             </div>
+
           </div>
         </div>
       </div>
@@ -84,11 +87,11 @@
           <br>
           <h3>Detalles del Trabajo</h3>
           <hr>
-          <form action="modelo/guardarInforme.php" method="POST">
-            <b>Fecha de Manteniento</b>
+          <form action="modelo/guardarInfome.php">
+            <b>Fecha de Mantenimiento</b>
             <input type="date" name="" class="form-control">
             <br>
-            <b>Agregar fotografias</b>
+             <b>Agregar fotografias</b>
             <input type="file" name="" class="form-control">
             <br>
             <b>Estado</b>
@@ -106,8 +109,6 @@
         </div>
       </div>
     </div>
-    
-    
     <script src="https://kit.fontawesome.com/fc6955f185.js"></script>
     <script src="js/selects.js"></script>
     <script>

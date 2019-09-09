@@ -41,18 +41,17 @@
         <div class="col-sm-12">
           <br>
           <h3 class="text-center"><i class="far fa-calendar-alt"></i> Calendario Procesos</h3>
-
-          <div class="row">
+        
+            <div class="row">
             <div class="col-sm-4 offset-4">
-              <a href="mesProceso.php">Ver Resumen</a>
-              <hr>
+                <a href="mesProceso.php">Ver Resumen</a>
               <select class="custom-select" name="sistema" id="sistema">
                 <option>Selecciona el Sistema</option>
                 <?php
                   $sistemas = $db->query("SELECT * FROM sistemas")or die('error'.mysqli_errno($db));
 
                   while($fila = mysqli_fetch_array($sistemas)){
-                    echo "<option value=".$fila['id'].">".$fila['nombre']."</option>";
+                    echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
                   }
                 ?>
               </select>
@@ -69,23 +68,25 @@
                 <div id="equipment"></div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-4 offset-4">
-              <select name="mes" class="custom-select">
-              <?php
-                $meses = $db->query("SELECT * FROM meses");
-                while($fila=mysqli_fetch_array($meses)){
-                  echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
-                }
-              ?>
-              </select>
+          
+            <div class="row">
+              <div class="col-sm-4 offset-4">
+                 <select name="meses" class="custom-select">
+                 <?php 
+                 $meses = $db->query("SELECT * FROM meses")or die("error".mysqli_errno($db));
+                  while($fila = mysqli_fetch_array($meses)){
+                      echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
+                    }
+                 ?>
+                  </select>
+                                  
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-4 offset-4">
-               <div id="processCalendario"></div>
+             <div class="row">
+              <div class="col-sm-4 offset-4">
+                  <div id="processCalendario"></div>
+              </div>
             </div>
-          </div>
           </form>
         </div>
       </div>

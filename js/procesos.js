@@ -10,12 +10,14 @@ $(document).ready(function(){
 
 		$("#meses").change(function(){
 		 	 equipmt = $("#equipos").val();
-		 	 var month = $('#meses').val();
+		 	 var month=$('#meses').val();
+		
+
 
 			$.ajax({
 				url:"controlador/procesos.php",
 				type:"GET",
-				data:"meses="+month+"&equipo="+equipmt,
+				data:"meses="+month+"&equipos="+equipmt,
 				beforeSend:function(){
 					$("#process").html("Por favor espere...");
 				},
