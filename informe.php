@@ -61,51 +61,23 @@
               <div id="equipment"></div>
             </div>
             <div class="col-sm-3">
-    
-                <select name="meses" id="meses" class="custom-select">
-                   <option value="#">Selecciona el Mes</option>
-                 <?php 
-                 $meses = $db->query("SELECT * FROM meses")or die("error".mysqli_errno($db));
-                  while($fila = mysqli_fetch_array($meses)){
-                      echo "<option value='".$fila['id']."'>".$fila['nombre']."</option>";
-                    }
-                 ?>
-                  </select>
-          
+                <select name="periodo" id="periodo" class="custom-select">
+                   <option value="#">Seleccionar Periodo</option>
+                   <option value="2019">2019</option>
+                   <option value="2020">2020</option>
+                   <option value="2021">2021</option>
+                   <option value="2022">2022</option>
+                   <option value="2023">2023</option>
+                </select>
             </div>
-
           </div>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-8" style="margin-top: 4%">
-          <div id="process"></div>
-        </div>
-        <div class="col-sm-4">
-          <br>
-          <h3>Detalles del Trabajo</h3>
-          <hr>
-          <form action="modelo/guardarInfome.php">
-            <b>Fecha de Mantenimiento</b>
-            <input type="date" name="" class="form-control">
-            <br>
-             <b>Agregar fotografias</b>
-            <input type="file" name="" class="form-control">
-            <br>
-            <b>Estado</b>
-            <select class="custom-select">
-              <option>Ok</option>
-              <option>Mantenimiento</option>
-              <option>Dañado</option>
-            </select>
-            <br><br>
-            <b>Observacion</b>
-            <textarea class="form-control"></textarea>
-            <br>
-            <button class="btn btn-success">Guardar Actividad</button>
-          </form>
+        <div class="col-sm-12" style="margin-top: 4%">
+          <div id="verInformes"></div>
         </div>
       </div>
     </div>
@@ -130,7 +102,7 @@
         })
       })
     </script>
-    <script src="js/procesos.js"></script>
+    <script src="js/mostrarInformes.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 

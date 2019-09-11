@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$("#sistema").change(function(){
+
 		var sistem = $("#sistema").val();
 		var subsistem=null;
 		var equipmt=null;
@@ -8,11 +9,18 @@ $(document).ready(function(){
 			
 		})
 
-		$("#meses").change(function(){
-		 	 equipmt = $("#equipos").val();
-		 	 var month=$('#meses').val();
 		
 
+		$("#meses").change(function(){
+
+			var mesElegido = $(this).val();
+			
+		 	 equipmt = $("#equipos").val();
+		 	 $('#equipo_id').val(equipmt);
+		 	 $('#id_mes').val(mesElegido);
+
+		 	 var month=$('#meses').val();
+		
 
 			$.ajax({
 				url:"controlador/procesos.php",
@@ -26,6 +34,7 @@ $(document).ready(function(){
 				}
 			})
 		})
+
 
 	})
 })

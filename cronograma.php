@@ -87,22 +87,26 @@
           <br>
           <h3>Detalles del Trabajo</h3>
           <hr>
-          <form action="modelo/guardarInfome.php">
+          <form action="modelo/guardarInfome.php" method="post" enctype="multipart/form-data">
             <b>Fecha de Mantenimiento</b>
-            <input type="date" name="" class="form-control">
+            <input type="hidden" name="mes" id="id_mes">
+            <input type="hidden" name="id_user" value="<?php echo $idUser ?>">
+            <input type="hidden" name="equipo" id="equipo_id">
+            <input type="date" name="fecha" class="form-control" required>
             <br>
              <b>Agregar fotografias</b>
-            <input type="file" name="" class="form-control">
+            <input type="file" id="foto" name="foto" class="form-control">
             <br>
             <b>Estado</b>
-            <select class="custom-select">
-              <option>Ok</option>
-              <option>Mantenimiento</option>
-              <option>Dañado</option>
+            <select class="custom-select" name="estado">
+              <option>Seleccionar</option>
+              <option value="Ok">Ok</option>
+              <option value="Mantenimiento">Mantenimiento</option>
+              <option value="Dañado">Dañado</option>
             </select>
             <br><br>
             <b>Observacion</b>
-            <textarea class="form-control"></textarea>
+            <textarea class="form-control" name="desc" required></textarea>
             <br>
             <button class="btn btn-success">Guardar Actividad</button>
           </form>
